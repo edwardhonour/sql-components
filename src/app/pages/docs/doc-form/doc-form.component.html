@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <div class="card" style="min-height: 600px;">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-10">
+                      <h2>sql-form</h2>
+                      <p>Container for table driven form for adding, editing, and deleting records from a table.</p>
+                </div>
+                <div class="col-2 align-self-end">
+                    <button class="btn btn-secondary" [routerLink]="['/example-form']">Example</button>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+
+                        </div>
+                        <div class="card-body">
+                            <div class="table table-condensed table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Parameter</th>
+                                        <th>Usage/Default</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>                                     
+                                <tbody>
+                                    <tr>
+                                        <td>[table]</td>
+                                        <td>[table]="'psp_survey_template'"</td>
+                                        <td>Base table the form maintains.  Do not forget the single ticks inside the double quotes when using.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[card]</td>
+                                        <td>[card]="'Y'" (default 'Y')</td>
+                                        <td>If 'Y' form will be inside a bootstrap card with the title in the header.  If you want a closable card use <b>sql-card</b>.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[id]</td>
+                                        <td>[id]="id"</td>
+                                        <td>Primary key if you are editing an existing record. '0' inserts a new record.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[class]</td>
+                                        <td>[class]="'m-3 p-3'" (default m-2 p-2)</td>
+                                        <td>Classes applied to the form container.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[style]</td>
+                                        <td>[table]="'background-color: lightgrey;'" (default blank)</td>
+                                        <td>Style applied to the form container.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[bs_row]</td>
+                                        <td>[bs_row]="'Y'" (default 'Y')</td>
+                                        <td>If 'Y' a new bootstrap row is added.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>[bs_col]</td>
+                                        <td>[bs_col]="'col-xl-6 col-sm-12'" (default blank)</td>
+                                        <td>If not blank, classes applied to the column containing the component. </td>
+                                    </tr>
+                                    <tr>
+                                        <td>[handler]</td>
+                                        <td>[handler]="'post_template_form'" (default blank)</td>
+                                        <td>If not blank, classes applied to the column containing the component. </td>
+                                    </tr>
+                                </tbody>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

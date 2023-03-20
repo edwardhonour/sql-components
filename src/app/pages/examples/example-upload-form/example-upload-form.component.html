@@ -1,0 +1,56 @@
+<sql-upload-form 
+    [card]="'Y'" 
+    [table]="'psp_demo'"
+    [id]="'1'"
+    [title]="'Demo Form'"
+    [bs_row]="'Y'" 
+    [bs_col]="'col-xl-6'">
+
+            <sql-select  
+            [bs_row]="'Y'"
+            [appearance]="'outline'"
+            [bs_col]="'col-xl-4 col-lg-6 col-sm-12'"      
+            [handler]="'sql'" 
+            [sql]="'select id, full_name from nua_user order by full_name'"
+            [col]="'user_id'"
+            [label]="'User ID'"
+            [style]="'width:250px;'"></sql-select>
+
+            <sql-input  
+            [bs_row]="'Y'"
+            [bs_col]="'col-xl-4 col-lg-6 col-sm-12'"      
+            [appearance]="'outline'" 
+            [col]="'survey_id'"
+            [label]="'Survey ID'"
+            [style]="'width: 100px;'"></sql-input>
+
+            <sql-input  
+            [bs_row]="'Y'"
+            [bs_col]="'col-xl-4 col-lg-6 col-sm-12'"      
+            [appearance]="'outline'" 
+            [col]="'option_id'"
+            [label]="'Option ID'"
+            [style]="'width: 100px;'"></sql-input>
+
+            <sql-textarea
+            [rows]="'5'"
+            [maxrows]="'10'"
+            [top_label]="'Y'"
+            [bs_row]="'Y'"
+            [bs_col]="'col-xl-4 col-lg-6 col-sm-12'"
+            [appearance]="'outline'" 
+            [col]="'dsc'"
+            [label]="'Description'"
+            [style]="'width: 400px;'"></sql-textarea>
+
+            <sql-datepicker      
+            [appearance]="'fill'" 
+            [col]="'start_date'"
+            [label]="'start_date'"
+            [style]="'width: 100px;'"></sql-datepicker>
+
+            <sql-submit 
+            [class]="'btn btn-primary'"
+            [style]="'width: 200px;'"></sql-submit>
+
+</sql-upload-form>

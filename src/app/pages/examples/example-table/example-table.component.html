@@ -1,0 +1,53 @@
+<sql-table
+     [card]="'Y'"
+     [sql]="'select id, template_name, sector from psp_template order by template_name'"
+     [search]="''"
+     [edit]="'Y'"
+     [container_class]="'p-3'"
+     [container_style]="'background-color:lightgrey;'"
+     [bs_row]="'Y'"
+     [bs_col]="'col-12'"
+     [title]="'Survey Templates'"
+     [class]="'table table-condensed table-striped'"
+     (button_click)="doNothing($event);"
+     (row_click)="doNothing($event);"
+     (top_button_click)="doNothing($event);"
+     >
+        <!-- table format -->
+        <th #column id="id" style="max-width: 100px;" [hidden]="true" >ID</th>
+        <th #column id="template_name" [hidden]="true" >Template Name</th>
+        <th #column id="sector" [hidden]="true" >Sector</th>
+        <button class="btn btn-primary" #column style="width:40px;" [hidden]="true"><i class="bi bi-clipboard-data"></i></button> 
+        <!-- edit form -->
+        <sql-form 
+        [embedded]="'Y'"
+        [card]="'Y'" 
+        [table]="'psp_template'"
+        [id]="'0'"
+        [title]="'Edit Template'"
+        [bs_row]="'Y'" 
+        [bs_col]="'col-xl-6'">
+        
+                <sql-input  
+                [bs_row]="'Y'"
+                [bs_col]="'col-xl-4 col-lg-6 col-sm-12'"      
+                [appearance]="'outline'" 
+                [col]="'sector'"
+                [label]="'Sector'"
+                [style]="'width: 600px;'"></sql-input>
+    
+                <sql-input  
+                [bs_row]="'Y'"
+                [bs_col]="'col-xl-4 col-lg-6 col-sm-12'"      
+                [appearance]="'outline'" 
+                [col]="'template_name'"
+                [label]="'Template Name'"
+                [style]="'width: 600px;'"></sql-input>
+        
+                <sql-submit 
+                [class]="'btn btn-primary'"
+                [style]="'width: 200px;'"></sql-submit>
+    
+    </sql-form>
+
+</sql-table> 
